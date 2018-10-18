@@ -62,6 +62,10 @@ declare namespace InfiniteScroll {
          * Loader component for indicating "loading more".
          */
         loader?: React.ReactElement<any>;
+        /**
+         * Override method to return a different scroll listener if it's not the immediate parent of InfiniteScroll.
+         */
+        getScrollParent(): React.Component<any>;
     }
     class InfiniteScroll extends React.Component<InfiniteScrollProps> {
         getParentElement(elem?: HTMLElement | null): HTMLElement | undefined | null;
